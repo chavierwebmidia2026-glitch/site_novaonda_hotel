@@ -1,0 +1,20 @@
+/* ===============================
+   < CHWM := CHAVIERWEBMÍDIA >
+   < CSS := ESTILO GERAL STYLE.CSS >
+   =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #101cc4;
+    font-family: Arial, sans-serif;
+}
