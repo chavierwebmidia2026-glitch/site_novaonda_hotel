@@ -1,3 +1,4 @@
+
 <!-- =============================
     < CHWM := CHAVIERWEBMÍDIA >
     < HTML := PÁGINA HOME >
@@ -6,14 +7,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
-
-
 {% block title %}
 NovaOnda
 {% endblock %}
 
 {% block content %}
+
 
 <!-- =========================
      CARROSSEL DE DESTAQUE
@@ -24,17 +23,25 @@ NovaOnda
     <!-- Indicadores -->
     <div class="carousel-indicators">
 
-        <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="0" class="active"
-            aria-current="true">
+        <button type="button"
+                data-bs-target="#carouselDestaque"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true">
         </button>
 
-        <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="1">
+        <button type="button"
+                data-bs-target="#carouselDestaque"
+                data-bs-slide-to="1">
         </button>
 
-        <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="2">
+        <button type="button"
+                data-bs-target="#carouselDestaque"
+                data-bs-slide-to="2">
         </button>
 
     </div>
+
 
     <!-- Imagens -->
     <div class="carousel-inner">
@@ -42,78 +49,87 @@ NovaOnda
         <!-- Imagem 01 -->
         <div class="carousel-item active">
 
-            <img src="{% static 'imagem/images.jpeg' %}" class="d-block w-100 H-50" alt="Destaque 1">
+            <img src="{% static 'imagem/images.jpeg' %}"
+                 class="d-block w-100"
+                 alt="Nova Onda Hotel">
 
         </div>
+
 
         <!-- Imagem 02 -->
         <div class="carousel-item">
 
-            <img src="{% static 'imagem/294760357.jpg' %}" class="d-block w-100" alt="Destaque 2">
+            <img src="{% static 'imagem/294760357.jpg' %}"
+                 class="d-block w-100"
+                 alt="Nova Onda Hotel">
 
         </div>
+
 
         <!-- Imagem 03 -->
         <div class="carousel-item">
 
-            <img src="{% static 'imagem/2492582507_WxH.jpg.' %}" class="d-block w-100" alt="Destaque 3">
+            <img src="{% static 'imagem/2492582507_WxH.jpg' %}"
+                 class="d-block w-100"
+                 alt="Nova Onda Hotel">
 
         </div>
 
     </div>
 
+
     <!-- Botão anterior -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaque" data-bs-slide="prev">
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselDestaque"
+            data-bs-slide="prev">
 
         <span class="carousel-control-prev-icon"></span>
 
     </button>
 
+
     <!-- Botão próximo -->
-    <button class="carousel-control-next " type="button" data-bs-target="#carouselDestaque" data-bs-slide="next">
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselDestaque"
+            data-bs-slide="next">
 
         <span class="carousel-control-next-icon"></span>
 
     </button>
 
 </div>
+
+
+
+<!-- =========================
+     CARDS DE HOSPEDAGEM
+========================== -->
+
 <div class="container mt-5 py-5">
 
     <div class="row g-4">
 
-        <!-- HOTEL -->
-        <div class="col-md-4">
+
+        <!-- =========================
+             NOVA ONDA HOTEL
+        ========================== -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
             <div class="hotel-card h-100 text-center rounded-5 overflow-hidden">
 
-                <img src="{% static 'imagem/images (1).png' %}" class="img-ondas card-img-top" alt="Hotel">
+                <img src="{% static 'imagem/images (1).png' %}"
+                     class="card-img-top"
+                     alt="Nova Onda Hotel">
 
-                <div class="card-body ">
-
-                    <p>NovaOnda Hotel e descubra um ambiente acolhedor, confortável e preparado para proporcionar uma
-                        experiência especial durante sua estadia.</p>
-
-                    <a href="#" class="btn btn-primary">
-                        Conhecer
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Ondas do Forte -->
-        <div class="col-md-4">
-            <div class="hotel-card h-100 text-center rounded-5 overflow-hidden">
-
-                <img src="{% static 'imagem/Captura de tela 2026-09-06 015202.png' %}" class="img-hotel card-img-top"
-                    alt="Quarto">
-
-                <div class="card-body m-3">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
 
                     <p>
-                        A Pousada Ondas do Forte oferece conforto, tranquilidade e praticidade para você aproveitar
-                        momentos especiais em um ambiente agradável e acolhedor.
-
+                        NovaOnda Hotel e descubra um ambiente acolhedor,
+                        confortável e preparado para proporcionar uma
+                        experiência especial durante sua estadia.
                     </p>
 
                     <a href="#" class="btn btn-primary">
@@ -121,21 +137,32 @@ NovaOnda
                     </a>
 
                 </div>
+
             </div>
+
         </div>
 
 
-        <!-- SERVIÇOS -->
-        <div class="col-md-4">
+
+        <!-- =========================
+             POUSADA ONDAS DO FORTE
+        ========================== -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
             <div class="hotel-card h-100 text-center rounded-5 overflow-hidden">
 
-                <img src="{% static 'imagem/Captura de tela 2026-09-06 015403.png' %}" class="img-hotel card-img-top"
-                    alt="Serviços do hotel">
+                <img src="{% static 'imagem/Captura de tela 2026-09-06 015202.png' %}"
+                     class="card-img-top"
+                     alt="Pousada Ondas do Forte">
 
-                <div class="card-body m-3 ">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
 
-                    <p>A Pousada Brisa do Forte combina conforto e tranquilidade em um espaço aconchegante, ideal para
-                        quem busca uma estadia agradável e momentos inesquecíveis.
+                    <p>
+                        A Pousada Ondas do Forte oferece conforto,
+                        tranquilidade e praticidade para você aproveitar
+                        momentos especiais em um ambiente agradável
+                        e acolhedor.
                     </p>
 
                     <a href="#" class="btn btn-primary">
@@ -143,7 +170,42 @@ NovaOnda
                     </a>
 
                 </div>
+
             </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             POUSADA BRISA DO FORTE
+        ========================== -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="hotel-card h-100 text-center rounded-5 overflow-hidden">
+
+                <img src="{% static 'imagem/Captura de tela 2026-09-06 015403.png' %}"
+                     class="card-img-top"
+                     alt="Pousada Brisa do Forte">
+
+                <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
+
+                    <p>
+                        A Pousada Brisa do Forte combina conforto e
+                        tranquilidade em um espaço aconchegante, ideal
+                        para quem busca uma estadia agradável e
+                        momentos inesquecíveis.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Conhecer
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -151,38 +213,52 @@ NovaOnda
 </div>
 
 
+
+<!-- =========================
+     GRUPO NOVA ONDA
+========================== -->
+
 <section class="grupo-nova-onda py-5">
+
     <div class="container">
 
+        <div class="row align-items-center g-4 g-lg-5">
 
-        <div class="row align-items-center g-5">
 
-            <!-- TEXTO -->
-            <div class="col-lg-7">
+            <!-- =========================
+                 TEXTO
+            ========================== -->
+
+            <div class="col-12 col-lg-7">
 
                 <span class="grupo-subtitulo">
                     GRUPO NOVA ONDA
                 </span>
 
+
                 <h2 class="grupo-titulo mt-2">
                     Conforto, lazer e hospitalidade em Cabo Frio
                 </h2>
+
+
                 <p class="grupo-texto">
-                    O Grupo Nova Onda, localizado em Cabo Frio, na Região dos Lagos, reúne o Nova Onda Hotel, a Pousada
-                    Ondas do Forte e a Pousada Brisa do Forte, além do Restaurante Nova Onda. O Nova Onda Hotel,
-                    inaugurado em 2021, possui mais de 70 quartos para casais e famílias, oferecendo uma estrutura
-                    completa com piscina de borda infinita, jacuzzi, sauna e restaurante aberto ao público. As Pousadas
-                    Ondas do Forte e Brisa do Forte oferecem conforto, tranquilidade e lazer para toda a família, com
-                    diferentes opções de hospedagem. Todas as unidades estão localizadas próximas à Praia do Forte,
-                    proporcionando aos nossos hóspedes uma experiência especial de conforto, praticidade e momentos
+                    O Grupo Nova Onda, localizado em Cabo Frio, na
+                    Região dos Lagos, reúne o Nova Onda Hotel, a
+                    Pousada Ondas do Forte e a Pousada Brisa do Forte,
+                    além do Restaurante Nova Onda. O Nova Onda Hotel,
+                    inaugurado em 2021, possui mais de 70 quartos para
+                    casais e famílias, oferecendo uma estrutura completa
+                    com piscina de borda infinita, jacuzzi, sauna e
+                    restaurante aberto ao público. As Pousadas Ondas
+                    do Forte e Brisa do Forte oferecem conforto,
+                    tranquilidade e lazer para toda a família, com
+                    diferentes opções de hospedagem. Todas as unidades
+                    estão localizadas próximas à Praia do Forte,
+                    proporcionando aos nossos hóspedes uma experiência
+                    especial de conforto, praticidade e momentos
                     inesquecíveis em Cabo Frio.
                 </p>
-                <p class="grupo-texto">
-                    As Pousadas Ondas do Forte e Brisa do Forte
-                    oferecem conforto e lazer para toda a família,
-                    com diferentes opções de quartos para tornar
-                    cada estadia ainda mais especial.
-                </p>
+
 
                 <a href="#" class="btn btn-nova-onda mt-3">
                     Conheça o Grupo
@@ -190,42 +266,103 @@ NovaOnda
 
             </div>
 
-            <!-- DESTAQUES -->
-            <div class="col-lg-5">
+
+
+            <!-- =========================
+                 DESTAQUES
+            ========================== -->
+
+            <div class="col-12 col-lg-5">
 
                 <div class="grupo-destaques">
 
-                    <div class="destaque-item">
-                        <i class="bi bi-building"></i>
+
+                    <!-- Hotel -->
+
+                    <div class="d-flex align-items-center gap-3 py-3 border-bottom">
+
+                        <i class="bi bi-building fs-2"></i>
+
                         <div>
-                            <h5>Nova Onda Hotel</h5>
-                            <p>Mais de 70 quartos e estrutura completa.</p>
+
+                            <h5 class="mb-1">
+                                Nova Onda Hotel
+                            </h5>
+
+                            <p class="mb-0">
+                                Mais de 70 quartos e estrutura completa.
+                            </p>
+
                         </div>
+
                     </div>
 
-                    <div class="destaque-item">
-                        <i class="bi bi-house-heart"></i>
+
+
+                    <!-- Pousadas -->
+
+                    <div class="d-flex align-items-center gap-3 py-3 border-bottom">
+
+                        <i class="bi bi-house-heart fs-2"></i>
+
                         <div>
-                            <h5>2 Pousadas</h5>
-                            <p>Ondas do Forte e Brisa do Forte.</p>
+
+                            <h5 class="mb-1">
+                                2 Pousadas
+                            </h5>
+
+                            <p class="mb-0">
+                                Ondas do Forte e Brisa do Forte.
+                            </p>
+
                         </div>
+
                     </div>
 
-                    <div class="destaque-item">
-                        <i class="bi bi-water"></i>
+
+
+                    <!-- Praia -->
+
+                    <div class="d-flex align-items-center gap-3 py-3 border-bottom">
+
+                        <i class="bi bi-water fs-2"></i>
+
                         <div>
-                            <h5>Praia do Forte</h5>
-                            <p>Hospedagens próximas ao mar.</p>
+
+                            <h5 class="mb-1">
+                                Praia do Forte
+                            </h5>
+
+                            <p class="mb-0">
+                                Hospedagens próximas ao mar.
+                            </p>
+
                         </div>
+
                     </div>
 
-                    <div class="destaque-item">
-                        <i class="bi bi-cup-hot"></i>
+
+
+                    <!-- Restaurante -->
+
+                    <div class="d-flex align-items-center gap-3 py-3">
+
+                        <i class="bi bi-cup-hot fs-2"></i>
+
                         <div>
-                            <h5>Restaurante Nova Onda</h5>
-                            <p>Aberto também ao público.</p>
+
+                            <h5 class="mb-1">
+                                Restaurante Nova Onda
+                            </h5>
+
+                            <p class="mb-0">
+                                Aberto também ao público.
+                            </p>
+
                         </div>
+
                     </div>
+
 
                 </div>
 
@@ -235,9 +372,7 @@ NovaOnda
 
     </div>
 
-
 </section>
-
 
 
 {% endblock %}
