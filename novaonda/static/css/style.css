@@ -25,8 +25,8 @@ body {
    ============================ */
 
 header {
-    background-Color: #ebf1f5;
-    color: #fff;
+    background: linear-gradient(135deg, #003b73, #0066cc, #00a8e8);
+ 
 
 }
 
@@ -110,6 +110,140 @@ header {
 }
 
 
+/* ==========================
+   GRUPO NOVA ONDA
+   ========================== */
+
+.grupo-nova-onda {
+    background: linear-gradient(
+        135deg,
+        #fff8d6,
+        #ffe082,
+        #e7a644
+    );
+}
+
+.grupo-subtitulo {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #8a5a00;
+}
+
+.grupo-titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3d2a0b;
+}
+
+.grupo-texto {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4d3b20;
+}
+
+.btn-nova-onda {
+    background-color: #3d2a0b;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn-nova-onda:hover {
+    transform: translateY(-3px);
+    background-color: #634718;
+    color: #fff;
+}
+
+
+/* ==========================
+   DESTAQUES
+   ========================== */
+
+.grupo-destaques {
+    background: rgba(255, 255, 255, 0.55);
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(8px);
+}
+
+.destaque-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(61, 42, 11, 0.15);
+}
+
+.destaque-item:last-child {
+    border-bottom: none;
+}
+
+.destaque-item i {
+    font-size: 2rem;
+    color: #8a5a00;
+}
+
+.destaque-item h5 {
+    margin: 0;
+    font-weight: 700;
+    color: #3d2a0b;
+}
+
+.destaque-item p {
+    margin: 5px 0 0;
+    color: #5c4a2d;
+}
+
+
+/* ==========================
+   RESPONSIVO
+   ========================== */
+
+@media (max-width: 991px) {
+
+    .grupo-titulo {
+        font-size: 2rem;
+    }
+
+    .grupo-texto {
+        font-size: 1rem;
+    }
+
+    .grupo-destaques {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .grupo-nova-onda {
+        padding: 50px 15px !important;
+    }
+
+    .grupo-titulo {
+        font-size: 1.7rem;
+    }
+
+    .grupo-subtitulo {
+        letter-spacing: 2px;
+    }
+
+    .grupo-destaques {
+        padding: 20px;
+    }
+
+    .destaque-item {
+        gap: 12px;
+    }
+
+    .destaque-item i {
+        font-size: 1.5rem;
+    }
+}
+
+
 
 
 
@@ -119,8 +253,8 @@ header {
 
 
 footer {
-    background: #e4e7e9;
-    color: #fff;
+    background: linear-gradient(135deg, #003b73, #0066cc, #00a8e8);
+    color: #f1dca2;
     padding: 2rem 0;
 }
 
