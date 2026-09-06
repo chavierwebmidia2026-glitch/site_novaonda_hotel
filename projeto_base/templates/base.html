@@ -24,16 +24,14 @@
 
     <!-- CSS próprio -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/sobre.css' %}">
-    <link rel="stylesheet" href="{% static 'css/contatos.css' %}">
-
+   
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column  min-vh-100">
 
     {% include 'includes/header.html' %}
 
-    <main class="flex-grow-1 py-5">
+    <main class="flex-grow-1 gap-2 ">
 
         {% block content %}
         {% endblock %}

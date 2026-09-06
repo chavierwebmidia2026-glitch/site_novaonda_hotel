@@ -2,3 +2,70 @@
     < CHWM := CHAVIERWEBMÍDIA >
     < HTML := PÁGINA SOBRE >
     ============================= -->
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Sobre
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/sobre.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="sobre py-5 ">
+
+
+    <div class="container mt-5 text-center">
+
+        <div class="d-flex align-items-center m-5 mb-4">
+
+
+
+
+            <div class="mb-4">
+
+                <i class="bi bi-info-circle display-1 text-primary"></i>
+
+                <h1 class="display-4">
+                    Sobre o Projeto Base Django
+                </h1>
+
+                <p class="lead">
+                    Estrutura inicial funcionando!
+                </p>
+
+
+            </div>
+
+
+            <div class="mb-4">
+
+                <div>
+
+                    <img src="{% static 'imagem/istockphoto-2149125445-1024x1024.jpg' %}"alt="Imagem sobre" class="img-fluid rounded-5 shadow-lg">
+
+
+                </div>
+
+
+            </div>
+
+    
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+{% endblock %}

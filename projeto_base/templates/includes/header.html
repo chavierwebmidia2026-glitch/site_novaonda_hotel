@@ -2,27 +2,21 @@
     < CHWM := CHAVIERWEBMÍDIA >
     < HTML := PÁGINA HEADER.HTML INCLUDE >
     ==================================== -->
+{% load static %}
 
-
-<header class="header bg-dark text-white">
+<header class="header  text-white">
 
     <nav class="navbar navbar-expand-md navbar-dark">
 
         <div class="container">
 
-            <!-- LOGO -->
-            <a href="{% url 'home' %}" class="navbar-brand fs-4">
-                Projeto Base Django
+            <a href="{% url 'home' %}" class="navbar-brand">
+                <img src="{% static 'imagem/images (1).png' %}" alt="Logo" height="50">
             </a>
 
             <!-- BOTÃO HAMBÚRGUER -->
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuNavbar"
-                    aria-controls="menuNavbar"
-                    aria-expanded="false"
-                    aria-label="Abrir menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+                aria-controls="menuNavbar" aria-expanded="false" aria-label="Abrir menu">
 
                 <span class="navbar-toggler-icon"></span>
 
@@ -40,7 +34,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{% url 'sobre' %}" class="nav-link">
                             Sobre
                         </a>
                     </li>

@@ -14,7 +14,94 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    background-color: #5ec949;
+
+    background: linear-gradient(135deg,
+            #0d47a1,
+            #1976d2,
+            #42a5f5) !important;
+
     font-family: Arial, sans-serif;
+}
+
+/* ============================
+            HEADER
+   ============================ */
+
+header {
+    background-Color: #ebf1f5;
+    color: #fff;
+    
+}
+
+
+
+
+/* ============================
+         CARROSSEL
+   ============================ */
+
+.carousel-item {
+    height: 600px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* ============================
+            FOOTER
+   ============================ */
+
+
+footer {
+    background: #e4e7e9;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.redes-socia a {
+    color: 135deg,
+        #0d47a1,
+        #1976d2,
+        #42a5f5;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+
+.redes-sociais a:hover {
+    color: #4db2da;
+    Transition: color 0.3s ease;
+    transform: translateY(-1px);
+    transform: scale(1.2);
+
+
+}
+
+.titulo-footer {
+    background: linear-gradient(135deg,
+            #0d47a1,
+            #1976d2,
+            #42a5f5);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
+}
+
+.titulo-footer:hover {
+    color: #4db2da;
+    transform: scale(1.05);
 }

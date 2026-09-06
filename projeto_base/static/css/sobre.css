@@ -2,3 +2,7 @@
    < CHWM := CHAVIERWEBMÍDIA >
    < CSS := ESTILO SOBRE.CSS >
    ============================ */
+
+body {
+    background-color: red !important;
+}
