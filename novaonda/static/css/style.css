@@ -14,10 +14,16 @@ html {
 }
 
 body {
-    background-image: url("../imagem/depositphotos_206912520-stock-photo-top-view-arranged-seashells-sea.jpg");
-    background-size: 1700px;
-    background-repeat: no-repeat;
+     background: linear-gradient(
+        135deg,
+        #fff8d6,
+        #ffe082,
+        #e7a644
+    );
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* ============================
