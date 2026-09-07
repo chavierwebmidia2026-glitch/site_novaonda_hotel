@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import MenuHotel, Suite, Foto
+from .models import MenuHotel, Suite, Foto, CafeDaManha
 
 
 def index(request):
@@ -49,5 +49,22 @@ def galeria(request):
     return render(
         request,
         'galeria.html',
+        context
+    )
+
+
+def cafe_da_manha(request):
+
+    cafes = CafeDaManha.objects.filter(
+        ativo=True
+    ).order_by('ordem')
+
+    context = {
+        'cafes': cafes,
+    }
+
+    return render(
+        request,
+        'cafe_da_manha.html',
         context
     )

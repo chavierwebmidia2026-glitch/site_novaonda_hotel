@@ -1,0 +1,75 @@
+<!-- =============================
+    < CHWM := CHAVIERWEBMÍDIA >
+    < HTML := PÁGINA CAFE_DA_MANHA
+    ============================= -->
+
+
+
+
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+Café da Manhã
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="text-center mb-5">
+        ☕ Café da Manhã
+    </h1>
+
+    <div class="row g-4">
+
+        {% for cafe in cafes %}
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card h-100">
+
+                    {% if cafe.imagem %}
+
+                        <img
+                            src="{{ cafe.imagem.url }}"
+                            class="card-img-top"
+                            alt="{{ cafe.nome }}"
+                        >
+
+                    {% endif %}
+
+                    <div class="card-body">
+
+                        <h3 class="card-title">
+                            {{ cafe.nome }}
+                        </h3>
+
+                        {% if cafe.descricao %}
+
+                            <p class="card-text">
+                                {{ cafe.descricao }}
+                            </p>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        {% empty %}
+
+            <p class="text-center">
+                Nenhum item disponível no café da manhã.
+            </p>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

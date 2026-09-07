@@ -90,3 +90,31 @@ class Foto(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+class CafeDaManha(models.Model):
+
+    nome = models.CharField(
+        max_length=100
+    )
+
+    descricao = models.TextField(
+        blank=True
+    )
+
+    imagem = models.ImageField(
+        upload_to='cafe-da-manha/',
+        blank=True,
+        null=True
+    )
+
+    ativo = models.BooleanField(
+        default=True
+    )
+
+    ordem = models.PositiveIntegerField(
+        default=0
+    )
+
+    def __str__(self):
+        return self.nome

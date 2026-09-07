@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import MenuHotel, Suite, Foto
+from .models import MenuHotel, Suite, Foto, CafeDaManha
 
 @admin.register(MenuHotel)
 class MenuHotelAdmin(admin.ModelAdmin):
@@ -46,6 +46,24 @@ class FotoAdmin(admin.ModelAdmin):
     list_display = (
         'ordem',
         'titulo',
+        'ativo',
+    )
+
+    list_filter = (
+        'ativo',
+    )
+
+    ordering = (
+        'ordem',
+    )
+
+
+@admin.register(CafeDaManha)
+class CafeDaManhaAdmin(admin.ModelAdmin):
+
+    list_display = (
+        'ordem',
+        'nome',
         'ativo',
     )
 
