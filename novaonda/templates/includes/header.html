@@ -33,16 +33,38 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{% url 'sobre' %}" class="nav-link">
-                            Sobre
-                        </a>
-                    </li>
+                   
+                    <!-- MENU HOTEL -->
+                    <li class="nav-item dropdown">
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            Serviços
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Hotel
                         </a>
+
+                        <ul class="dropdown-menu">
+
+                            {% for item in menu_hotel %}
+
+                            <li>
+                                <a href="{{ item.url }}" class="dropdown-item">
+                                    {{ item.icone }}
+                                    {{ item.titulo }}
+                                </a>
+                            </li>
+
+                            {% empty %}
+
+                            <li>
+                                <span class="dropdown-item">
+                                    Nenhuma opção disponível
+                                </span>
+                            </li>
+
+                            {% endfor %}
+
+                        </ul>
+
                     </li>
 
                     <li class="nav-item">

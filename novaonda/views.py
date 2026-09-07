@@ -1,9 +1,15 @@
 from django.shortcuts import render
+from .models import MenuHotel
 
-# Create your views here.
+from django.shortcuts import render
+
 
 def index(request):
-    return render(request, 'index.html')
+
+    return render(
+        request,
+        'index.html'
+    )
 
 def sobre(request):
     return render(request, 'sobre.html')
