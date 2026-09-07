@@ -1,0 +1,78 @@
+
+<!-- =============================
+    < CHWM := CHAVIERWEBMÍDIA >
+    < HTML := PÁGINA SUÍTES.HTML >
+    ============================= -->
+
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+Suítes
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="text-center mb-5">
+        🛏️ Nossas Suítes
+    </h1>
+
+    <div class="row g-4">
+
+        {% for suite in suites %}
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card h-100">
+
+                    {% if suite.imagem %}
+
+                        <img
+                            src="{{ suite.imagem.url }}"
+                            class="card-img-top"
+                            alt="{{ suite.nome }}"
+                        >
+
+                    {% endif %}
+
+                    <div class="card-body">
+
+                        <h3 class="card-title">
+                            {{ suite.nome }}
+                        </h3>
+
+                        <p class="card-text">
+                            {{ suite.descricao }}
+                        </p>
+
+                        <p>
+                            👥 Capacidade:
+                            {{ suite.capacidade }} pessoas
+                        </p>
+
+                        <p>
+                            💰 R$ {{ suite.preco }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        {% empty %}
+
+            <p class="text-center">
+                Nenhuma suíte disponível.
+            </p>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
