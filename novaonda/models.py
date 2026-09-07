@@ -62,3 +62,31 @@ class Suite(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Foto(models.Model):
+
+    titulo = models.CharField(
+        max_length=100
+    )
+
+    descricao = models.TextField(
+        blank=True
+    )
+
+    imagem = models.ImageField(
+        upload_to='galeria/',
+        blank=True,
+        null=True
+    )
+
+    ativo = models.BooleanField(
+        default=True
+    )
+
+    ordem = models.PositiveIntegerField(
+        default=0
+    )
+
+    def __str__(self):
+        return self.titulo

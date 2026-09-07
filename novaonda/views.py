@@ -1,8 +1,6 @@
 from django.shortcuts import render
-from .models import MenuHotel
-from .models import Suite
 
-from django.shortcuts import render
+from .models import MenuHotel, Suite, Foto
 
 
 def index(request):
@@ -12,8 +10,13 @@ def index(request):
         'index.html'
     )
 
+
 def sobre(request):
-    return render(request, 'sobre.html')
+
+    return render(
+        request,
+        'sobre.html'
+    )
 
 
 def suites(request):
@@ -29,5 +32,22 @@ def suites(request):
     return render(
         request,
         'suites.html',
+        context
+    )
+
+
+def galeria(request):
+
+    fotos = Foto.objects.filter(
+        ativo=True
+    ).order_by('ordem')
+
+    context = {
+        'fotos': fotos,
+    }
+
+    return render(
+        request,
+        'galeria.html',
         context
     )

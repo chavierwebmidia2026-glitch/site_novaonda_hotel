@@ -1,0 +1,69 @@
+<!-- =============================
+    < CHWM := CHAVIERWEBMÍDIA >
+    < HTML := PÁGINA GALERIA.HTML
+    ============================= -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+Galeria
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="text-center mb-5" style="font-family: 'Playfair Display', serif; letter-spacing: 1px;">
+        ✨ Galeria Exclusiva
+    </h1>
+    <div class="text-center mb-4">
+        <span style="display:inline-block; width:60px; height:2px; background:#c9a24b;"></span>
+    </div>
+
+    <div class="row g-4">
+
+        {% for foto in fotos %}
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card h-100">
+
+                {% if foto.imagem %}
+
+                <img src="{{ foto.imagem.url }}" class="card-img-top" alt="{{ foto.titulo }}">
+
+                {% endif %}
+
+                <div class="card-body">
+
+                    <h3 class="card-title">
+                        {{ foto.titulo }}
+                    </h3>
+
+                    {% if foto.descricao %}
+
+                    <p class="card-text">
+                        {{ foto.descricao }}
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <p class="text-center">
+            Nenhuma foto disponível.
+        </p>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
