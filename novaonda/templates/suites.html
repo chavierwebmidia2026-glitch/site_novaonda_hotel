@@ -1,61 +1,187 @@
-
 <!-- =============================
     < CHWM := CHAVIERWEBMÍDIA >
     < HTML := PÁGINA SUÍTES.HTML >
     ============================= -->
 
-
-
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-Suítes
+Suítes | NovaOnda Hotel
 {% endblock %}
+
 
 {% block content %}
 
-<div class="container py-5">
 
-    <h1 class="text-center mb-5">
-        🛏️ Nossas Suítes
-    </h1>
+<!-- ============================
+     HERO
+============================ -->
 
-    <div class="row g-4">
+<section class="bg-novaonda text-white">
 
-        {% for suite in suites %}
+    <div class="container py-5">
 
-            <div class="col-md-6 col-lg-4">
+        <div class="row justify-content-center text-center">
 
-                <div class="card h-100">
+            <div class="col-12 col-md-10 col-lg-8">
+
+                <!-- LOGO -->
+
+                <div class="mb-3">
+
+                    <img
+                        src="{% static 'imagem/images__1_.png-removebg-preview.png' %}"
+                        alt="NovaOnda Hotel"
+                        class="img-servico img-fluid"
+                        width="60"
+                    >
+
+                </div>
+
+
+                <!-- TÍTULO -->
+
+                <h1 class="display-4 fw-bold mt-2">
+
+                    Nossas
+                    <span class="text-title">
+                        Suítes
+                    </span>
+
+                </h1>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <p class="lead mt-3">
+
+                    Conforto, qualidade e tranquilidade
+                    para tornar sua estadia inesquecível.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================
+     SUÍTES
+============================ -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="text-warning fw-bold text-uppercase">
+                Hospedagem
+            </span>
+
+            <h2 class="fw-bold text-novaonda mt-2">
+
+                Conheça nossas suítes
+
+            </h2>
+
+            <p class="text-secondary mx-auto"
+               style="max-width: 650px;">
+
+                Escolha a suíte ideal para aproveitar
+                momentos especiais no NovaOnda Hotel.
+
+            </p>
+
+        </div>
+
+
+        <!-- ============================
+             CARDS
+        ============================= -->
+
+        <div class="row g-4">
+
+            {% for suite in suites %}
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="card suite-card h-100 border-0 shadow rounded-4 overflow-hidden">
+
+
+                    <!-- IMAGEM -->
 
                     {% if suite.imagem %}
 
-                        <img
-                            src="{{ suite.imagem.url }}"
-                            class="card-img-top"
-                            alt="{{ suite.nome }}"
-                        >
+                    <img
+                        src="{{ suite.imagem.url }}"
+                        alt="{{ suite.nome }}"
+                        class="card-img-top imagem-suite"
+                    >
 
                     {% endif %}
 
-                    <div class="card-body">
 
-                        <h3 class="card-title">
+                    <!-- CONTEÚDO -->
+
+                    <div class="card-body d-flex flex-column text-center p-4">
+
+                        <h3 class="h4 fw-bold text-novaonda">
+
                             {{ suite.nome }}
+
                         </h3>
 
-                        <p class="card-text">
+
+                        <p class="text-secondary mt-3">
+
                             {{ suite.descricao }}
+
                         </p>
 
-                        <p>
-                            👥 Capacidade:
+
+                        <hr class="border-warning">
+
+
+                        <!-- CAPACIDADE -->
+
+                        <p class="mb-2">
+
+                            <i class="bi bi-people-fill text-primary"></i>
+
+                            Capacidade:
                             {{ suite.capacidade }} pessoas
+
                         </p>
 
-                        <p>
-                            💰 R$ {{ suite.preco }}
+
+                        <!-- PREÇO -->
+
+                        <p class="mb-4">
+
+                            <i class="bi bi-cash-coin text-success"></i>
+
+                            <strong>
+                                R$ {{ suite.preco }}
+                            </strong>
+
                         </p>
+
+
+                        <!-- BOTÃO -->
+
+                        <a href="#"
+                           class="btn btn-primary mt-auto">
+
+                            Conhecer suíte
+
+                        </a>
 
                     </div>
 
@@ -63,16 +189,69 @@ Suítes
 
             </div>
 
-        {% empty %}
 
-            <p class="text-center">
-                Nenhuma suíte disponível.
-            </p>
+            {% empty %}
 
-        {% endfor %}
+
+            <!-- ============================
+                 SEM SUÍTES
+            ============================= -->
+
+            <div class="col-12 text-center py-5">
+
+                <h3 class="text-novaonda">
+
+                    Nenhuma suíte disponível
+
+                </h3>
+
+                <p class="text-secondary">
+
+                    Cadastre as suítes pelo Django Admin.
+
+                </p>
+
+            </div>
+
+
+            {% endfor %}
+
+        </div>
 
     </div>
 
-</div>
+</section>
+
+
+
+<!-- ============================
+     FINAL
+============================ -->
+
+<section class="experiencia-final py-5">
+
+    <div class="container">
+
+        <div class="text-center rounded-4 p-4 p-md-5">
+
+            <h2 class="fw-bold text-novaonda">
+
+                Sua estadia começa aqui
+
+            </h2>
+
+            <p class="text-secondary mb-0">
+
+                No NovaOnda Hotel, cada detalhe é pensado
+                para proporcionar conforto e bem-estar.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 {% endblock %}

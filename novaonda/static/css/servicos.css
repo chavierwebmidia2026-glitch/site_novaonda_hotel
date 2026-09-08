@@ -1,0 +1,54 @@
+/* ============================
+   < CHWM := CHAVIERWEBMÍDIA >
+   < CSS := ESTILO SERVIÇOS.CSS >
+   ============================ */
+
+/* ===============================
+   NOVAONDA - SERVIÇOS
+   =============================== */
+
+.bg-novaonda {
+    background: linear-gradient(135deg, #003b73, #0b0357, #00a8e8);
+}
+
+.text-novaonda {
+    color: #003b73;
+}
+
+/* ===============================
+   EXPERIÊNCIA COMPLETA
+   =============================== */
+
+.experiencia-final{
+    background-color: #bd7c48;
+    border: 1px solid rgba(0, 59, 115, 0.10);
+    box-shadow: 0 8px 20px rgba(0, 59, 115, 0.12);
+}
+
+
+
+.img-servico  {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 100px;
+}
+
+.img-servico:hover {
+    transform: scale(1.08);
+}
+
+.text-title{
+    color: #bd7c48;
+}
+
+
+.text-servicos{
+     background: linear-gradient(135deg, #003b73, #0b0357, #00a8e8);
+     width: 400px;
+     margin: auto;
+
+
+
+} 

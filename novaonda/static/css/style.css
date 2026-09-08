@@ -14,13 +14,8 @@ html {
 }
 
 body {
-     background: linear-gradient(
-        135deg,
-        #fff8d6,
-        #ffe082,
-        #e7a644
-    );
-    background-size: cover;
+    background: linear-gradient(135deg, #003b73, #0b0357, #00a8e8);
+    color: #447fee;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -31,20 +26,30 @@ body {
    ============================ */
 
 header {
-    background: linear-gradient(135deg, #003b73, #0066cc, #00a8e8);
- 
+    background: linear-gradient(135deg, #003b73, #0b0357, #00a8e8);
+    color: #447fee;
+    border: 1px solid #8a5a00;
+
+}
+
+.nav-link {
+    color: #bd7c48;
+    font-weight: 250px;
+
+
 
 }
 
 .img-logo {
-    transition: transform 0.5s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    border-radius: 100px;
 
 }
 
 
 .img-logo:hover {
     transform: scale(1.05);
-
+    filter: drop-shadow(0 0 5px #ffffff);
 }
 
 
@@ -74,7 +79,7 @@ header {
 
 .hotel-card:hover {
     transform: scale(1.05);
-    ;
+
 }
 
 
@@ -112,21 +117,23 @@ header {
 
 .img-hotel:hover {
     transform: scale(1.05);
-    ;
+    
 }
 
+
+
+.container-pousadas {
+    background-color: #bd7c48;
+
+
+}
 
 /* ==========================
    GRUPO NOVA ONDA
    ========================== */
 
 .grupo-nova-onda {
-    background: linear-gradient(
-        135deg,
-        #fff8d6,
-        #ffe082,
-        #e7a644
-    );
+    background-color: #bd7c48;
 }
 
 .grupo-subtitulo {
@@ -162,6 +169,170 @@ header {
     color: #fff;
 }
 
+
+
+
+/* ===============================
+   CARDS DE POUSADAS
+   =============================== */
+
+.hotel-card {
+    min-height: 500px;
+
+    border: 1px solid rgba(23, 104, 226, 0.5);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.btn{
+    background: linear-gradient(135deg, #003b73, #0b0357,#bd7c48);
+    color: #bd7c48;
+    border: 1px solid #bd7c48;
+
+
+}
+
+
+/* ===============================
+   HOVER
+   =============================== */
+
+.hotel-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 59, 115, 0.20);
+
+}
+
+
+/* ===============================
+   IMAGEM
+   =============================== */
+
+.hotel-card img {
+
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+
+}
+
+
+/* ===============================
+   CORPO
+   =============================== */
+
+.hotel-card .card-body {
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 767px) {
+
+    .hotel-card {
+
+        min-height: auto;
+
+    }
+
+    .hotel-card img {
+
+        height: 220px;
+
+    }
+
+}
+
+/* ===============================
+   CELULAR
+   =============================== */
+
+@media (max-width: 767px) {
+
+    .container-pousadas {
+        padding: 0 15px;
+    }
+
+    .container-pousadas .hotel-card {
+        min-height: auto;
+    }
+
+    .container-pousadas .hotel-card img {
+        height: 220px;
+    }
+
+    .container-pousadas .card-body {
+        min-height: auto;
+
+        padding: 25px 20px;
+    }
+
+    .container-pousadas .card-body h3 {
+        font-size: 1.35rem;
+    }
+
+    .container-pousadas .card-body p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* ===============================
+   CELULAR PEQUENO
+   =============================== */
+
+@media (max-width: 480px) {
+
+    .container-pousadas {
+        padding: 0 10px;
+    }
+
+    .container-pousadas .hotel-card img {
+        height: 200px;
+    }
+
+    .container-pousadas .card-body {
+        padding: 20px 15px;
+    }
+
+    .container-pousadas .card-body h3 {
+        font-size: 1.2rem;
+    }
+
+    .container-pousadas .card-body p {
+        font-size: 0.9rem;
+    }
+
+    .container-pousadas .btn {
+        width: 100%;
+        max-width: 180px;
+    }
+
+}
 
 /* ==========================
    DESTAQUES
@@ -259,18 +430,33 @@ header {
 
 
 footer {
-    background: linear-gradient(135deg, #003b73, #0066cc, #00a8e8);
-    color: #f1dca2;
+    background: linear-gradient(135deg, #003b73, #0b0357, #00a8e8);
+    color: #447fee;
     padding: 2rem 0;
 }
 
 .logo-footer {
-    width: 100px;
-    height: 70px;
+    width: 230px;
+    height: 130px;
     margin-left: 100px;
+    border-radius: 100px;
 }
 
+.logo-footer:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 5px #ffffff);
+}
+
+
+.cast{
+    color: #8a5a00;
+
+}
+
+
+
 .redes-sociais {
+    color: #000;
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
@@ -279,15 +465,15 @@ footer {
 .redes-socia a {
     color: 135deg,
         #0d47a1,
-        #1976d2,
-        #42a5f5;
+        #092541,
+        #03090e;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 
 .redes-sociais a:hover {
-    color: #4db2da;
+    color: #dbdedf;
     Transition: color 0.3s ease;
     transform: translateY(-1px);
     transform: scale(1.2);
@@ -296,14 +482,6 @@ footer {
 }
 
 .titulo-footer {
-    background: linear-gradient(135deg,
-            #0d47a1,
-            #1976d2,
-            #42a5f5);
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -311,6 +489,6 @@ footer {
 }
 
 .titulo-footer:hover {
-    color: #4db2da;
+    color: #d8dddf;
     transform: scale(1.05);
 }

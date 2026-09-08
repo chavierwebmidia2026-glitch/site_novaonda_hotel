@@ -1,0 +1,198 @@
+<!-- =============================
+    < CHWM := CHAVIERWEBMÍDIA >
+    < HTML := PÁGINA SERVIÇOS.HTML >
+    ============================= -->
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Serviços | NovaOnda Hotel
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- ============================
+     HERO
+============================ -->
+
+<section class="bg-novaonda text-white">
+
+  <div class="container py-5">
+
+    <div class="row justify-content-center text-center">
+
+      <div class="col-12 col-md-10 col-lg-8">
+
+        <!-- LOGO -->
+
+        <div class="mb-3">
+
+          <img src="{% static 'imagem/images__1_.png-removebg-preview.png' %}" alt="NovaOnda Hotel"
+            class="img-servico img-fluid" width="60">
+
+        </div>
+
+
+        <!-- TÍTULO -->
+
+        <h1 class="display-4 fw-bold mt-2">
+
+          Serviços
+          <span class="text-title">
+            Premium
+          </span>
+
+        </h1>
+
+
+        <!-- DESCRIÇÃO -->
+
+        <p class="lead mt-3">
+
+          Conforto, qualidade e experiências especiais
+          para tornar sua estadia inesquecível.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================
+     SERVIÇOS
+============================ -->
+
+<section class="py-5">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      {% for servico in servicos %}
+
+      <!-- CARD -->
+
+      <div class="col-12 col-sm-6 col-lg-4">
+
+        <div class="card h-100 border-0 shadow rounded-4 overflow-hidden">
+
+
+          <!-- IMAGEM -->
+
+          {% if servico.imagem %}
+
+          <img src="{{ servico.imagem.url }}" alt="{{ servico.nome }}" class="card-img-top imagem-servico">
+
+          {% endif %}
+
+
+          <!-- CONTEÚDO -->
+
+          <div class="card-body text-center p-4">
+
+            <h3 class="h4 fw-bold text-novaonda">
+
+              {{ servico.nome }}
+
+            </h3>
+
+
+            <p class="text-secondary mt-3">
+
+              {{ servico.descricao }}
+
+            </p>
+
+
+            <hr class="border-warning">
+
+
+            <small class="text-warning fw-bold">
+
+              NOVAONDA HOTEL
+
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {% empty %}
+
+
+      <!-- ============================
+                 SEM SERVIÇOS
+            ============================ -->
+
+      <div class="col-12 text-center py-5">
+
+        <h3 class="text-novaonda">
+
+          Nenhum serviço cadastrado
+
+        </h3>
+
+
+        <p class="text-secondary">
+
+          Cadastre os serviços pelo Django Admin.
+
+        </p>
+
+      </div>
+
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ============================
+     FINAL
+============================ -->
+
+<section class="experiencia-final bg- info py-5">
+
+  <div class="container">
+
+    <div class="text-servicos text-center rounded-4 p-4 p-md-5">
+
+      <h2 class="fw-bold">
+
+        Uma experiência completa
+
+      </h2>
+
+
+      <p class="text-secondary mb-0">
+
+        No NovaOnda Hotel, cada detalhe é pensado
+        para você aproveitar sua estadia.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{% endblock %}

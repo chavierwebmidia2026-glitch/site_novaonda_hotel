@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import MenuHotel, Suite, Foto, CafeDaManha
+from .models import MenuHotel, Suite, Foto, CafeDaManha, Servico
 
 
 def index(request):
@@ -18,6 +18,20 @@ def sobre(request):
         'sobre.html'
     )
 
+
+
+
+def servicos(request):
+
+    servicos = Servico.objects.filter(ativo=True)
+
+    return render(
+        request,
+        'servicos.html',
+        {
+            'servicos': servicos
+        }
+    )
 
 def suites(request):
 

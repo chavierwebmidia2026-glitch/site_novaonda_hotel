@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'                    # ← precisa da barra no começo
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # Email

@@ -1,6 +1,7 @@
 from django.db import models
 models.ImageField
 
+
 class MenuHotel(models.Model):
     titulo = models.CharField(max_length=100)
 
@@ -25,7 +26,6 @@ class MenuHotel(models.Model):
     def __str__(self):
         return self.titulo
 
-    
 
 class Suite(models.Model):
 
@@ -115,6 +115,29 @@ class CafeDaManha(models.Model):
     ordem = models.PositiveIntegerField(
         default=0
     )
+
+    def __str__(self):
+        return self.nome
+
+    from django.db import models
+
+
+# models.py
+
+from django.db import models
+
+class Servico(models.Model):
+    nome = models.CharField(max_length=100)
+    descricao = models.TextField()
+    imagem = models.ImageField(upload_to='servicos/', blank=True, null=True)
+    destaque = models.BooleanField(default=False, help_text="Marque para aparecer maior (ex: Spa)")
+    ordem = models.PositiveIntegerField(default=0)
+    ativo = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['ordem', 'nome']
+        verbose_name = "Serviço"
+        verbose_name_plural = "Serviços"
 
     def __str__(self):
         return self.nome
