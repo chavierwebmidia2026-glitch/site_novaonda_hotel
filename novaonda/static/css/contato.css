@@ -1,0 +1,52 @@
+/* ============================
+   < CHWM := CHAVIERWEBMÍDIA >
+   < CSS := ESTILO CONTATOS.CSS >
+   ============================ */
+
+
+
+.img-logo {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.img-logo:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 12px #ffd700);
+}
+
+
+/* =============================
+       MENSAGEM DE SUCESSO 
+   ============================= */
+
+.alert-succes{
+    background: linear-gradient(
+        135deg,
+        #bd7c48,
+       #bd7c48
+    );
+
+    color: #003b73;
+
+    border: 1px solid #00a8e8;
+
+    border-left: 5px solid #ffd700;
+
+    border-radius: 12px;
+
+    padding: 15px 18px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 59, 115, 0.15);
+}
+
+.alert i {
+    color: #00a8e8;
+    font-size: 1.2rem;
+}
+
+.alert .btn-close {
+    font-size: 0.8rem;
+}

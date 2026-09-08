@@ -32,6 +32,74 @@ header {
 
 }
 
+
+
+
+/* LINK HOTEL */
+
+.dropdown-menu{
+    background: linear-gradient(135deg, #003b73, #0b0357, #00a8e8);
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+
+/* HOVER NO HOTEL */
+
+.navbar .nav-link.dropdown-toggle:hover {
+    color: #1837c4;
+}
+
+
+/* SETINHA DO DROPDOWN */
+
+.navbar .dropdown-toggle::after {
+    transition: transform 0.3s ease;
+}
+
+
+/* SETINHA SE MOVIMENTA NO HOVER */
+
+.navbar .dropdown-toggle:hover::after {
+    transform: translateY(3px);
+}
+
+
+/* MENU DROPDOWN */
+
+.navbar .dropdown-menu {
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(199, 204, 209, 0.2);
+    padding: 8px;
+}
+
+
+/* ITENS */
+
+.navbar .dropdown-item {
+    color: #003b73;
+    border-radius: 8px;
+    padding: 10px 14px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* HOVER DOS ITENS */
+
+.navbar .dropdown-item:hover {
+    background: linear-gradient(135deg,
+            #003b73,
+            #0066cc);
+
+    color: #f5f1eb;
+
+    transform: translateX(5px);
+}
+
 .nav-link {
     color: #bd7c48;
     font-weight: 250px;
@@ -117,7 +185,7 @@ header {
 
 .img-hotel:hover {
     transform: scale(1.05);
-    
+
 }
 
 
@@ -192,8 +260,8 @@ header {
 }
 
 
-.btn{
-    background: linear-gradient(135deg, #003b73, #0b0357,#bd7c48);
+.btn {
+    background: linear-gradient(135deg, #003b73, #0b0357, #bd7c48);
     color: #bd7c48;
     border: 1px solid #bd7c48;
 
@@ -448,7 +516,7 @@ footer {
 }
 
 
-.cast{
+.cast {
     color: #8a5a00;
 
 }

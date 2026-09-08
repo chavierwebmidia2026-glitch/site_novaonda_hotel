@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import MenuHotel, Suite, Foto, CafeDaManha, Servico
+from .models import MenuHotel, Suite, Foto, CafeDaManha, Servico, Contato
 
 
 def index(request):
@@ -19,6 +19,30 @@ def sobre(request):
     )
 
 
+def contato(request):
+
+    if request.method == 'POST':
+
+        Contato.objects.create(
+            nome=request.POST.get('nome'),
+            email=request.POST.get('email'),
+            telefone=request.POST.get('telefone'),
+            assunto=request.POST.get('assunto'),
+            mensagem=request.POST.get('mensagem'),
+        )
+
+        return render(
+            request,
+            'contato.html',
+            {
+                'sucesso': True
+            }
+        )
+
+    return render(
+        request,
+        'contato.html'
+    )
 
 
 def servicos(request):

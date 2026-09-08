@@ -1,0 +1,639 @@
+<!-- =============================
+    < CHWM := CHAVIERWEBMÍDIA >
+    < HTML := PÁGINA CONTATO.HTML >
+    ============================= -->
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contato | NovaOnda Hotel
+{% endblock %}
+
+{% block content %}
+
+
+<!-- =========================
+     HERO
+     ========================= -->
+
+<section class="bg-novaonda text-white">
+
+    <div class="container py-5">
+
+        <div class="row justify-content-center text-center">
+
+            <div class="col-12 col-md-10 col-lg-8">
+
+                <div class="mb-3">
+
+                    <img src="{% static 'imagem/images__1_.png-removebg-preview.png' %}" alt="NovaOnda Hotel"
+                        width="400" class="img-logo img-fluid">
+
+                </div>
+
+                <h1 class="display-4 fw-bold mt-2">
+
+                    Entre em
+                    <span class="text-title">Contato</span>
+
+                </h1>
+
+                <p class="lead mt-3 mb-0">
+
+                    Estamos prontos para atender você
+                    e tornar sua experiência no NovaOnda Hotel
+                    ainda mais especial.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INFORMAÇÕES DE CONTATO
+     ========================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="text-warning fw-bold text-uppercase">
+                Fale conosco
+            </span>
+
+            <h2 class="fw-bold text-novaonda mt-2">
+                Estamos à sua disposição
+            </h2>
+
+            <p class="text-secondary mx-auto" style="max-width: 650px;">
+
+                Entre em contato com nossa equipe
+                através de um dos nossos canais de atendimento.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- TELEFONE -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card contato-card h-100 border-0 shadow rounded-4">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-telephone-fill fs-1 text-primary"></i>
+
+                        <h3 class="h5 fw-bold text-novaonda mt-3">
+                            Telefone
+                        </h3>
+
+                        <p class="text-secondary mb-1">
+                            (22) 2647-7668
+                        </p>
+
+                        <p class="text-secondary mb-0">
+                            (22) 3343-5625
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- E-MAIL -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card contato-card h-100 border-0 shadow rounded-4">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-envelope-fill fs-1 text-primary"></i>
+
+                        <h3 class="h5 fw-bold text-novaonda mt-3">
+                            E-mail
+                        </h3>
+
+                        <p class="text-secondary mb-0">
+                            reservas@novaondahotel.com.br
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENDEREÇO -->
+
+            <div class="col-12 col-md-12 col-lg-4">
+
+                <div class="card contato-card h-100 border-0 shadow rounded-4">
+
+                    <div class="card-body text-center p-4">
+
+                        <i class="bi bi-geo-alt-fill fs-1 text-primary"></i>
+
+                        <h3 class="h5 fw-bold text-novaonda mt-3">
+                            Endereço
+                        </h3>
+
+                        <p class="text-secondary mb-1">
+
+                            Rua Florismundo Baptista Machado, 100
+
+                        </p>
+
+                        <p class="text-secondary mb-0">
+
+                            Centro - Cabo Frio - RJ
+
+                        </p>
+
+                        <p class="text-secondary mb-0">
+
+                            CEP 28950-007
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO + FORMULÁRIO
+     ========================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4 align-items-stretch">
+
+
+            <!-- FORMULÁRIO -->
+
+            <div class="col-12 col-lg-7">
+
+                <div class="card contato-form h-100 border-0 shadow rounded-4">
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <span class="text-warning fw-bold text-uppercase">
+                            Atendimento
+                        </span>
+
+                        <h2 class="fw-bold text-novaonda mt-2">
+                            Envie uma mensagem
+                        </h2>
+
+                        <p class="text-secondary mb-4">
+
+                            Preencha o formulário abaixo
+                            e fale diretamente com nossa equipe.
+
+                        </p>
+
+
+                        <!-- =========================
+                 MENSAGEM DE SUCESSO
+                 ========================= -->
+
+                        {% if sucesso %}
+
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+
+                            <i class="bi bi-check-circle-fill me-2"></i>
+
+                            Mensagem enviada com sucesso!
+
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar">
+                            </button>
+
+                        </div>
+
+                        {% endif %}
+
+
+
+
+
+
+                        <form method="post">
+
+                            {% csrf_token %}
+
+                            <div class="row g-3">
+
+
+                                <!-- NOME -->
+
+                                <div class="col-12 col-md-6">
+
+                                    <label for="nome" class="form-label fw-bold">
+                                        Nome
+                                    </label>
+
+                                    <input type="text" class="form-control" id="nome" name="nome"
+                                        placeholder="Digite seu nome" required>
+
+                                </div>
+
+
+                                <!-- E-MAIL -->
+
+                                <div class="col-12 col-md-6">
+
+                                    <label for="email" class="form-label fw-bold">
+                                        E-mail
+                                    </label>
+
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Digite seu e-mail" required>
+
+                                </div>
+
+
+                                <!-- TELEFONE -->
+
+                                <div class="col-12">
+
+                                    <label for="telefone" class="form-label fw-bold">
+                                        Telefone
+                                    </label>
+
+                                    <input type="tel" class="form-control" id="telefone" name="telefone"
+                                        placeholder="(22) 99999-9999">
+
+                                </div>
+
+
+                                <!-- ASSUNTO -->
+
+                                <div class="col-12">
+
+                                    <label for="assunto" class="form-label fw-bold">
+                                        Assunto
+                                    </label>
+
+                                    <select class="form-select" id="assunto" name="assunto">
+
+                                        <option selected>
+                                            Selecione um assunto
+                                        </option>
+
+                                        <option>
+                                            Informações sobre hospedagem
+                                        </option>
+
+                                        <option>
+                                            Reserva
+                                        </option>
+
+                                        <option>
+                                            Serviços
+                                        </option>
+
+                                        <option>
+                                            Outro assunto
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- MENSAGEM -->
+
+                                <div class="col-12">
+
+                                    <label for="mensagem" class="form-label fw-bold">
+                                        Mensagem
+                                    </label>
+
+                                    <textarea class="form-control" id="mensagem" name="mensagem" rows="5"
+                                        placeholder="Digite sua mensagem..." required></textarea>
+
+                                </div>
+
+
+                                <!-- BOTÕES -->
+
+                                <div class="col-12">
+
+                                    <div class="d-flex flex-column flex-sm-row gap-3 mt-3">
+
+
+                                        <!-- ENVIAR -->
+
+                                        <button type="submit" class="btn btn-primary px-4">
+
+                                            <i class="bi bi-send-fill me-2"></i>
+
+                                            Enviar mensagem
+
+                                        </button>
+
+
+
+
+                                        <!-- RESERVAR -->
+
+                                        <a href="#" class="btn btn-warning px-4">
+
+                                            <i class="bi bi-calendar-check-fill me-2"></i>
+
+                                            Reservar agora
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ATENDIMENTO -->
+
+            <div class="col-12 col-lg-5">
+
+                <div class="card contato-atendimento h-100 border-0 shadow rounded-4">
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <span class="text-warning fw-bold text-uppercase">
+                            NovaOnda Hotel
+                        </span>
+
+                        <h2 class="fw-bold text-novaonda mt-2">
+                            Fale com nossa equipe
+                        </h2>
+
+                        <p class="text-secondary mt-3">
+
+                            Nossa equipe está preparada para
+                            ajudar você com informações sobre
+                            hospedagem, serviços e reservas.
+
+                        </p>
+
+
+                        <div class="mt-4">
+
+
+                            <div class="d-flex align-items-start mb-4">
+
+                                <i class="bi bi-clock-fill text-primary fs-4 me-3"></i>
+
+                                <div>
+
+                                    <h3 class="h6 fw-bold mb-1">
+                                        Atendimento
+                                    </h3>
+
+                                    <p class="text-secondary mb-0">
+                                        Entre em contato conosco
+                                        para mais informações.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="d-flex align-items-start mb-4">
+
+                                <i class="bi bi-calendar-check-fill text-primary fs-4 me-3"></i>
+
+                                <div>
+
+                                    <h3 class="h6 fw-bold mb-1">
+                                        Reservas
+                                    </h3>
+
+                                    <p class="text-secondary mb-0">
+                                        Consulte disponibilidade
+                                        e faça sua reserva.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="d-flex align-items-start">
+
+                                <i class="bi bi-geo-alt-fill text-primary fs-4 me-3"></i>
+
+                                <div>
+
+                                    <h3 class="h6 fw-bold mb-1">
+                                        Localização
+                                    </h3>
+
+                                    <p class="text-secondary mb-0">
+                                        Cabo Frio - Rio de Janeiro
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BOTÃO RESERVA -->
+
+                        <div class="mt-5">
+
+                            <a href="#" class="btn btn-primary w-100 py-2">
+
+                                <i class="bi bi-calendar-check-fill me-2"></i>
+
+                                Fazer uma reserva
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOCALIZAÇÃO + GOOGLE MAPS
+     ========================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="text-warning fw-bold text-uppercase">
+                Localização
+            </span>
+
+            <h2 class="fw-bold text-novaonda mt-2">
+                Onde estamos
+            </h2>
+
+            <p class="text-secondary">
+                Encontre facilmente o NovaOnda Hotel.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="col-12 col-lg-5">
+
+                <div class="h-100 bg-white rounded-4 shadow p-4 p-md-5">
+
+                    <i class="bi bi-geo-alt-fill fs-1 text-primary"></i>
+
+                    <h3 class="fw-bold text-novaonda mt-3">
+                        NovaOnda Hotel
+                    </h3>
+
+                    <p class="text-secondary mt-3">
+
+                        Rua Florismundo Baptista Machado, 100
+                        <br>
+                        Centro - Cabo Frio - RJ
+                        <br>
+                        CEP 28950-007
+
+                    </p>
+
+                    <hr class="border-warning">
+
+                    <p class="mb-2">
+
+                        <i class="bi bi-telephone-fill text-primary me-2"></i>
+
+                        (22) 2647-7668
+
+                    </p>
+
+                    <p class="mb-0">
+
+                        <i class="bi bi-envelope-fill text-primary me-2"></i>
+
+                        reservas@novaondahotel.com.br
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- GOOGLE MAPS -->
+
+            <div class="col-12 col-lg-7">
+
+                <div class="rounded-4 overflow-hidden shadow h-100">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Rua+Florismundo+Baptista+Machado,+100,+Cabo+Frio,+RJ&output=embed"
+                        width="100%" height="100%" style="border:0; min-height:350px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIÊNCIA FINAL
+     ========================= -->
+
+<section class="experiencia-final py-5">
+
+    <div class="container">
+
+        <div class="text-center rounded-4 p-4 p-md-5">
+
+            <h2 class="fw-bold text-novaonda">
+                Esperamos por você
+            </h2>
+
+            <p class="text-secondary mb-4">
+
+                Entre em contato com o NovaOnda Hotel
+                e prepare-se para viver momentos especiais.
+
+            </p>
+
+            <a href="#" class="btn btn-primary px-4">
+
+                <i class="bi bi-calendar-check-fill me-2"></i>
+
+                Reservar agora
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}

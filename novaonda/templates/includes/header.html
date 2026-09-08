@@ -45,7 +45,7 @@
 
 
                     <!-- MENU HOTEL -->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown ">
 
                         <a href="#"
                            class="nav-link dropdown-toggle"
@@ -57,7 +57,7 @@
 
                         </a>
 
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu text-white ">
 
                             {% for item in menu_hotel %}
 
@@ -96,7 +96,7 @@
                     <!-- CONTATO -->
                     <li class="nav-item">
 
-                        <a href="#" class="nav-link">
+                        <a href="{% url 'contato' %}" class="nav-link">
                             Contato
                         </a>
 
