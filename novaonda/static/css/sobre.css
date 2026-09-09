@@ -1,8 +1,61 @@
-/* ============================
+/* =============================
    < CHWM := CHAVIERWEBMÍDIA >
-   < CSS := ESTILO SOBRE.CSS >
-   ============================ */
+   < CSS := SOBRE >
+   ============================= */
 
-body {
-    background-color: red !important;
+
+/* LOGO */
+
+.bg-novaonda {
+  background-image: url('/static/imagem/novaonda1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg-novaonda::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 40, 70, 0.35); /* controla a opacidade aqui */
+  z-index: 0;
+}
+
+.bg-novaonda > * {
+  position: relative;
+  z-index: 1;
+}
+
+.logo-sobre {
+    transition: 0.3s ease;
+}
+
+.logo-sobre:hover {
+    transform: translateY(-5px) scale(1.03);
+    filter: drop-shadow(0 5px 10px rgba(255, 215, 0, 0.45));
+}
+
+
+/* IMAGENS */
+
+.imagem-sobre {
+    height: 280px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.imagem-sobre:hover {
+    transform: scale(1.02);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 575px) {
+
+    .imagem-sobre {
+        height: 200px;
+    }
+
 }
