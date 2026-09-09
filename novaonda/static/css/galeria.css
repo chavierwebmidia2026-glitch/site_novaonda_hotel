@@ -1,0 +1,41 @@
+/* =============================
+   < CHWM := CHAVIERWEBMÍDIA >
+   < CSS := GALERIA >
+   ============================= */
+
+
+/* LOGO */
+
+.logo-galeria {
+    transition: 0.3s ease;
+}
+
+.logo-galeria:hover {
+    transform: translateY(-5px) scale(1.03);
+    filter: drop-shadow(0 5px 10px rgba(255, 215, 0, 0.45));
+}
+
+
+/* IMAGENS */
+
+.imagem-galeria {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.imagem-galeria:hover {
+    transform: scale(1.03);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 575px) {
+
+    .imagem-galeria {
+        height: 210px;
+    }
+
+}
